@@ -1,0 +1,33 @@
+{
+	"name": "instant-tasks",
+	"description": "Example project using InstantDB and  NuxtJS. Authentication, schema, permissions, reactive UI and more.",
+	"keywords": [
+		"instantdb",
+		"localfirst",
+		"nuxt",
+		"vue",
+		"database"
+	],
+	"author": "Peter Koraca",
+	"license": "ISC",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"dependencies": {
+		"@instantdb/core": "^0.12.14",
+		"@nuxt/ui": "^2.18.4",
+		"dotenv": "^16.4.5",
+		"nuxt": "^3.13.0",
+		"vue": "latest"
+	},
+	"devDependencies": {
+		"instant-cli": "^0.12.14",
+		"prettier": "3.3.3"
+	}
+}
