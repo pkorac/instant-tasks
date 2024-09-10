@@ -1,4 +1,11 @@
 export default {
+	attrs: {
+		allow: {
+			create: "false",
+			delete: "false",
+			update: "false",
+		},
+	},
 	tasks: {
 		bind: ["loggedIn", "auth.id != null"],
 		allow: {

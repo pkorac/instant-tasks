@@ -2,6 +2,9 @@
 
 ![Nuxt+InstantDB](public/nuxtinstant.jpg)
 
+
+👉 [Demo](https://instant-nuxt.pages.dev) 👈
+
 This example project uses **[Nuxt](https://nuxt.com/) + [InstantDB](https://www.instantdb.com/)** to build a collaborative task management app. Users can login/register via code, create **teams**, add **collaborators** to a team and assign **tasks** to each other.
 
 ![Instant Tasks](public/hero.png)
