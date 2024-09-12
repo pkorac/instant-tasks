@@ -1,36 +1,43 @@
 <template>
-	<UCard class="max-w-96 mx-auto my-12">
-		<template #header>
-			<ds-h3>Login</ds-h3>
-		</template>
+	<div class="max-w-96 mx-auto pt-12 flex flex-col gap-12 h-full">
+		<ds-h1 class="">Instant Tasks</ds-h1>
+		<UCard>
+			<template #header>
+				<ds-h3>Login</ds-h3>
+			</template>
 
-		<div v-if="!user">
-			<transition mode="out-in">
-				<login-send-code
-					v-model="email"
-					:loading="loading"
-					:errorMessage="errorMessage"
-					@mailCode="mailCode"
-					@enterCode="enterCode = true"
-					v-if="!enterCode"
-				/>
+			<div v-if="!user">
+				<transition mode="out-in">
+					<login-send-code
+						v-model="email"
+						:loading="loading"
+						:errorMessage="errorMessage"
+						@mailCode="mailCode"
+						@enterCode="enterCode = true"
+						v-if="!enterCode"
+					/>
 
-				<login-enterCode
-					v-model="code"
-					:email="email"
-					:loading="loading"
-					:errorMessage="errorMessage"
-					@checkCode="checkCode"
-					@enterEmail="enterCode = false"
-					v-else="enterCode"
-				/>
-			</transition>
+					<login-enterCode
+						v-model="code"
+						:email="email"
+						:loading="loading"
+						:errorMessage="errorMessage"
+						@checkCode="checkCode"
+						@enterEmail="enterCode = false"
+						v-else="enterCode"
+					/>
+				</transition>
+			</div>
+			<div v-else class="flex flex-col gap-4">
+				<p>Already logged in as {{ user.email }}</p>
+				<UButton label="Sign out" @click="signOut" variant="outline" />
+			</div>
+		</UCard>
+		<div class="mt-auto py-4">
+			<UButton variant="link" label="Privacy policy" to="/privacy" />
+			<UButton variant="link" label="Terms & Conditions" to="/terms" />
 		</div>
-		<div v-else class="flex flex-col gap-4">
-			<p>Already logged in as {{ user.email }}</p>
-			<UButton label="Sign out" @click="signOut" variant="outline" />
-		</div>
-	</UCard>
+	</div>
 </template>
 <script setup lang="ts">
 import type { Member, Team } from "@/instant.schema.types";

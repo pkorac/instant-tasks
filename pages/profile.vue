@@ -27,6 +27,47 @@
 				/>
 			</div>
 		</div>
+
+		<UDivider />
+
+		<ds-surface class="max-w-sm flex flex-col gap-6">
+			<ds-h1>Build with Nuxt/Vue.js</ds-h1>
+			<p>
+				This is an example project built with
+				<a
+					class="hover:underline text-indigo-600"
+					href="https://www.instantdb.com/"
+					target="_blank"
+					>InstantDB</a
+				>
+				and
+				<a
+					class="hover:underline text-indigo-600"
+					href="https://nuxt.com/"
+					target="_blank"
+					>Nuxt</a
+				>. I've built a set of Nuxt/Vue <strong>composables</strong>,
+				<strong>middleware,</strong> <strong>utilities</strong> and other
+				features that might one day become a fully featured
+				<strong>Nuxt module.</strong>
+			</p>
+			<p>
+				See the
+				<a
+					class="hover:underline text-indigo-600"
+					href="https://github.com/pkorac/instant-tasks"
+					target="_blank"
+					>code repository</a
+				>
+				and grab any composables you need.
+			</p>
+
+			<!-- Privacy Policy -->
+			<div class="mt-auto py-4">
+				<UButton variant="link" label="Privacy policy" to="/privacy" />
+				<UButton variant="link" label="Terms & Conditions" to="/terms" />
+			</div>
+		</ds-surface>
 	</div>
 </template>
 <script setup lang="ts">
